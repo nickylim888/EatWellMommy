@@ -39,9 +39,12 @@
 <script>
 
 var treeData = [
-  {
+  {"name": "seasons",
+   "parent": "null",
+   "children": [{
+
     "name": "Fall Foods",
-    "parent": "null",
+    "parent": "Top",
     "children": [
       {
         "name": "Vegetables",
@@ -122,8 +125,50 @@ var treeData = [
 
       }
     ]
+  },
+//Winter
+  {
+    "name": "Winter",
+    "parent": "Level 2: B",
+    "children": [{
+      "name": "Vegetables",
+      "parent": "Level 2: C"
+    },
+    {
+      "name": "Fruits",
+      "parents": "Level 2: C"
+    }]
+    },
+//Spring
+  {
+    "name": "Spring",
+    "parent": "Level 3: C",
+    "children": [{
+      "name": "Vegetables",
+      "parent": "Level 3: D"
+    },
+    {
+      "name": "Fruits",
+      "parents": "Level 3: D"
+    }]
+    },
+  {
+    "name": "Summer",
+    "parent": "Level 2: D",
+    "children": [{
+      "name": "Vegetables",
+      "parent": "Level 2: E"
+    },
+    {
+      "name": "Fruits",
+      "parents": "Level 2: E"
+    }]
+    }
+  ]
   }
 ]
+
+
 
 
 
