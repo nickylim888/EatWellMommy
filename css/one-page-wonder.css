@@ -6,28 +6,39 @@
 
 body {
     margin-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    
 }
 
 .header-image {
     display: block;
     width: 100%;
     text-align: center;
-    background: url('http://babyem.co.uk/wp-content/uploads/2012/02/baby-with-vegetable-wall-in-front-940x423.jpg') no-repeat center center scroll;
+    background: no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    background-color: #CCFFFF;
+  
 }
 
 .headline {
-    padding: 120px 0;
+    padding: 100px 0;
+    background: #CCFFFF;
+    display: inline;
+
 }
 
 .headline h1 {
-    font-size: 130px;
-    background: green;
-    background: rgba(255,255,255,0.9);
+    font-size: 80px;
+    float: left;
+    width: 80%;
+    
+    background-color: #CCFFFF;
+    
 }
+
+  
 
 .headline h2 {
     font-size: 77px;
@@ -53,7 +64,10 @@ body {
 
 .featurette-heading {
     font-size: 50px;
+
 }
+
+
 
 footer {
     margin: 50px 0;
@@ -118,6 +132,7 @@ footer {
 @media(max-width:768px) {
     .container {
         margin: 0 15px;
+        padding-top: 100px;
     }
 
     .featurette-divider {
