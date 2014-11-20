@@ -1,31 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    
-
-
     <title>Eat Well Mommy</title>
-
-    <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <link href="css/one-page-wonder.css" rel="stylesheet">
+    <link href="css/one-page-wonder.css" rel="stylesheet">    
+    <style>
+        .apple {
+            background-color:green
+        }
 
-    
-    
+        .coffee {
+            background-color:brown;
+        }
 
+        .omg {
+            background-color:red;
+        }
 
+    </style>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+    var stuff = {
+        apple: {
+            lookAndFeel: 'apple',
+            msg: "Apples are great! Eat them"
+        },
+        coffee: {
+            lookAndFeel: 'apple',
+            msg: "I love coffee"
+        }
+    }
+
+    $(document).ready(function () {
+        $('#hi').bind('keypress', function (e) {
+            if (e.keyCode == 13) {                
+                y = $('#hi').val();
+                x = stuff[y];
+                if( x == undefined) {
+                    x = {
+                        lookAndFeel: 'omg',
+                        msg: "WTF"
+                    }
+                }
+
+                $('#content').html("<div class=''>"+x.msg+"</div>");
+            }
+        });
+    });
+    </script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -76,18 +104,13 @@
     <header class="header-image">
         <div class="headline">
             <div class="container">
-                <h1><img img-left img-responsive src="Pictures/healthymom.png"> Eat Well Mommy </h1>
-                
-
-   
+                <h1><img img-left img-responsive src="Pictures/healthymom.png"> Eat Well Mommy </h1>                
             </div>
         </div>
     </header>
 
     <!-- Page Content -->
     <div class="container">
-
-
         <!-- First Featurette -->
         <div class="featurette" id="about">
          
@@ -95,8 +118,13 @@
                   </span> 
             </h2>
 
-            <img class="featurette-image img-center img-responsive" src="Pictures/searchbar.png">
-        
+<!--
+             <iframe width='100%' height='600' frameBorder='0' src='SearchBar.html'></iframe>
+    -->    
+
+
+    <input id='hi'>
+    <div id='content'>you are looking at me</div>
         </div>
 
          <hr class="featurette-divider">
@@ -137,6 +165,19 @@
                     <p class="lead"> Top foods NOT recommended for expecting and new moms </p>
 
                  <iframe width='100%' height='600px' frameBorder='0' src='Slider/SliderIndex2.html'></iframe>
+
+
+<!-- HTML Code-->
+
+
+
+<!-- CSS Code-->
+
+
+<!-- Javascript -->
+
+
+
 
                 </div>
 

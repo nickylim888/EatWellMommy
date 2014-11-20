@@ -1,0 +1,34 @@
+
+<!-- HTML Code-->
+
+
+<input id='hi'>
+    <div id='content'>you are looking at me</div>
+
+
+<!-- CSS Code-->
+
+<style>
+.apple {
+    background-color:green
+}
+</style>
+
+<!-- Javascript -->
+
+
+<script>
+stuff = {
+    apple: "Apples are great! Eat them",
+    coffee: "coffee",
+}
+
+$(document).ready(function () {
+    $('#hi').bind('keypress', function (e) {
+        if (e.keyCode == 13) {
+            y = $('#hi').val();
+            $('#content').html("<div class="+stuff[y]+">"+stuff[y]+"</div>");
+        }
+    });
+});
+</script>
