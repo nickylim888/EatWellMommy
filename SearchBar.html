@@ -1,34 +1,55 @@
 
 <!-- HTML Code-->
 
+<form action="/search" method="get" class="sfm" name="theform">
+    <input type="text" class="search left rounded" name="q" value="" id="hi"/>
+</form>
 
-<input id='hi'>
-    <div id='content'>you are looking at me</div>
 
 
 <!-- CSS Code-->
 
 <style>
-.apple {
-    background-color:green
+.rounded {
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
 }
+
+#hi {height: 27px; width: 300px; vertical-align: top;}
+
+#hi {background: url('http://i.imgur.com/IgC4eEb.png') #f5f5f5 right center no-repeat; background-size: 20px 20px;}
+
 </style>
 
 <!-- Javascript -->
 
-
-<script>
-stuff = {
-    apple: "Apples are great! Eat them",
-    coffee: "coffee",
-}
-
-$(document).ready(function () {
-    $('#hi').bind('keypress', function (e) {
-        if (e.keyCode == 13) {
-            y = $('#hi').val();
-            $('#content').html("<div class="+stuff[y]+">"+stuff[y]+"</div>");
+ <script>
+    var stuff = {
+        apple: {
+            lookAndFeel: 'apple',
+            msg: "Apples are great! Eat them"
+        },
+        coffee: {
+            lookAndFeel: 'apple',
+            msg: "I love coffee"
         }
+    }
+
+    $(document).ready(function () {
+        $('#hi').bind('keypress', function (e) {
+            if (e.keyCode == 13) {                
+                y = $('#hi').val();
+                x = stuff[y];
+                if( x == undefined) {
+                    x = {
+                        lookAndFeel: 'omg',
+                        msg: "WTF"
+                    }
+                }
+
+                $('#content').html("<div class=''>"+x.msg+"</div>");
+            }
+        });
     });
-});
 </script>
