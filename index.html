@@ -10,50 +10,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <link href="css/one-page-wonder.css" rel="stylesheet">    
-    <style>
-        .apple {
-            background-color:green
-        }
 
-        .coffee {
-            background-color:brown;
-        }
-
-        .omg {
-            background-color:red;
-        }
-
-    </style>
-    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
-    <script>
-    var stuff = {
-        apple: {
-            lookAndFeel: 'apple',
-            msg: "Apples are great! Eat them"
-        },
-        coffee: {
-            lookAndFeel: 'apple',
-            msg: "I love coffee"
-        }
-    }
-
-    $(document).ready(function () {
-        $('#hi').bind('keypress', function (e) {
-            if (e.keyCode == 13) {                
-                y = $('#hi').val();
-                x = stuff[y];
-                if( x == undefined) {
-                    x = {
-                        lookAndFeel: 'omg',
-                        msg: "WTF"
-                    }
-                }
-
-                $('#content').html("<div class=''>"+x.msg+"</div>");
-            }
-        });
-    });
-    </script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -114,13 +71,57 @@
         <!-- First Featurette -->
         <div class="featurette" id="about">
          
-                <h2 class="featurette-heading"> <img img-left img-responsive src="Pictures/carrotfamily.jpg"> Should I eat ... ?
+                <h2 class="featurette-heading"> <img img-left img-responsive src="Pictures/carrotfamily.jpg"> Can I eat this... ?
                   </span> 
             </h2>
+                <style>
 
-<!--
-             <iframe width='100%' height='600' frameBorder='0' src='SearchBar.html'></iframe>
-    -->    
+        #hi {color: ;
+            font: 100 70px Lobster,arial,san-serif;
+            background: none;
+            border: none;
+            margin: 4px 0px 0px 27px;
+            outline: none;
+            height: 80px;
+            width: 840px;
+            display: block;
+            float: left;
+            }
+        #hi {background: #f5f5f5 center no-repeat; background-size: 20px 20px;}
+       
+    </style>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+    var stuff = {
+        apple: {
+            lookAndFeel: 'apple',
+            msg: "According to Eatright.org, apples are a safe and healthy choice during pregnancy. However, it is essential that pregnant women wash their apples prior to eating them. Unwashed produce may contain harmful bacteria and parasites that can cause food-borne diseases such as toxoplasmosis and listeriosis according to the FDA and the American Pregnancy Association."
+        },
+        walnut: {
+            msg: "Walnuts, with 2.6 grams in a 1-ounce serving, serve as the best nut source of omega-3 fatty acids, polyunsaturated fats found in just a few foods. Omega-3 fatty acids aid your baby's brain development. Many pregnant women have trouble getting an adequate supply of omega-3 fatty acid because of the recommendation that pregnant women not eat more than 12 ounces of fish per week due to the risk of mercury contamination. Fatty fish are one of the best dietary sources of omega-3 fatty acids. Walnuts also contain monounsaturated fats that can help lower cholesterol and prevent heart disease. Like all nuts, walnuts can help you meet your protein requirements, supplying 4 grams of protein per ounce. You need between 75 and 100 grams of protein per day during pregnancy, the American Pregnancy Association advises."
+        },
+       broccoli: {
+            msg: "Broccoli has an impressive nutritional profile. It is high in fiber, very high in vitamin C and has potassium, B6 and vitamin A, raved Victoria Jarzabkowski, a nutritionist with the Fitness Institute of Texas at the University of Texas at Austin. For a nonstarchy vegetable, it has a good amount of protein. Broccoli is also packed with phytochemicals and antioxidants. Phytochemicals are chemicals in plants that are responsible for color, smell and flavor. Research shows that they have numerous healthful benefits, according to the American Institute for Cancer Research. Phytochemicals in broccoli are good for the immune system. They include glucobrassicin; carotenoids, such as zeaxanthin and beta-carotene; and kaempferol, a flavonoid."
+        },
+                }
+
+    $(document).ready(function () {
+        $('#hi').bind('keypress', function (e) {
+            if (e.keyCode == 13) {                
+                y = $('#hi').val();
+                x = stuff[y];
+                if( x == undefined) {
+                    x = {
+                        lookAndFeel: 'omg',
+                        msg: "WTF"
+                    }
+                }
+
+                $('#content').html("<div class=''>"+x.msg+"</div>");
+            }
+        });
+    });
+    </script>  
 
 
     <input id='hi'>
